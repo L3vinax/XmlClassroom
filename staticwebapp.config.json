@@ -1,7 +1,10 @@
 {
   "routes": [
     {
-      "route": "/xml"
+      "route": "/xml",
+      "methods": [
+        "get"
+      ]
     }
   ]
 }
