@@ -30,27 +30,27 @@ jobs:
       - name: Copy Files to Output Dir
         run: |
           echo Make Output Folder
-          mkdir xml/output
+          mkdir output
           echo Make Submodule Output Folder
-          mkdir -p .xml/output/modules/ace-builds/src-noconflict
+          mkdir -p ./output/modules/ace-builds/src-noconflict
           echo Copy HTML Files...
-          cp *.html .xml/output
+          cp *.html ./output
           echo Copy JavaScript Files...
-          cp *.js .xml/output
+          cp *.js ./output
           echo Copy PNG Files...
-          cp *.png .xml/output
+          cp *.png ./output
           echo Copy Icon Files...
-          cp *.ico .xml/output
+          cp *.ico ./output
           echo Copy JSON Files...
-          cp *.json .xml/output
+          cp *.json ./output
           echo Copy ExampleCourse Folder...
-          cp -R ExampleCourse .xml/output
+          cp -R ExampleCourse ./output
           echo Copy MetroStyle Folder...
-          cp -R MetroStyle .xml/output
+          cp -R MetroStyle ./output
           echo Copy images Folder...
-          cp -R images .xml/output
+          cp -R images ./output
           echo Copy ACE Submodule Folder
-          cp -R .xml/modules/ace-builds/src-noconflict ./output/modules/ace-builds
+          cp -R ./modules/ace-builds/src-noconflict ./output/modules/ace-builds
           
       - name: Azure Static Web Apps Deploy
         uses: Azure/static-web-apps-deploy@v1
@@ -58,7 +58,7 @@ jobs:
           # Action to perform
           action: 'upload'
           # Directory location of the application source code
-          app_location: './xml/output'
+          app_location: './output'
           # Required token
           azure_static_web_apps_api_token: ${{secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_FOREST_0726C190F}}
           # Skips the build step for the application source code if set to true.
