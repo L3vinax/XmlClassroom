@@ -58,7 +58,7 @@ jobs:
           # Action to perform
           action: 'upload'
           # Directory location of the application source code
-          app_location: './output'
+          app_location: '/xml./output'
           # Required token
           azure_static_web_apps_api_token: ${{secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_FOREST_0726C190F}}
           # Skips the build step for the application source code if set to true.
